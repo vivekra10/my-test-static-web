@@ -1,0 +1,7 @@
+steps:
+  - name: "gcr.io/cloud-builders/gsutil"
+    args: ["rsync", "-r", ".", "gs://my-test-static-website"]
+
+# Optional: specify any ignore files if you want to exclude certain files from the deployment
+options:
+  logging: CLOUD_LOGGING_ONLY
